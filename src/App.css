@@ -3,6 +3,10 @@
 /* font-family: 'Rufina', serif; */
 /* font-family: 'Work Sans', sans-serif; */
 
+* {
+  box-sizing: border-box;
+}
+
 .App {
   text-align: center;
 }
