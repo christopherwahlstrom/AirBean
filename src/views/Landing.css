@@ -1,32 +1,15 @@
 .landing {
     background-color: #38846D;
-    /* display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: auto;
-    grid-template-areas: 
-    "img-left logo img-right"; */
-    position: relative;
-    height: 100vh;
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
 }
 
 .img-left {
-    /* grid-area: img-left; */
-    position: absolute;
-    left: 0;
+
 }
 
 .img-logo {
-    /* grid-area: logo; */
-    position: absolute;
-    right: 14%;
-    top: 39%;
+
 }
 
 .img-right {
-    /* grid-area: img-right; */
-    position: absolute;
-    right: 0;
+
 }
