@@ -1,5 +1,5 @@
-import Header from '../Components/Header';
-import MenuItem from '../Components/MenuItem';
+import Header from '../components/Header';
+import MenuItem from '../components/MenuItem';
 
 function Menu() {
     return (
