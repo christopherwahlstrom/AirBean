@@ -1,15 +1,26 @@
 .landing {
     background-color: #38846D;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    height: 100vh;
 }
 
 .img-left {
-
+    align-self: flex-start;
+    height: 100%;
 }
 
 .img-logo {
-
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
 }
 
 .img-right {
-
+    height: 100%;
 }
+
