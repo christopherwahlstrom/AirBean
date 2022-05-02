@@ -1,6 +1,6 @@
 function Order() {
     return (
-        <section>
+        <section className='order-page'>
             <p>Ordernummer<span></span></p>
             <img></img>
             <h1>Din beställning är på väg!</h1>
