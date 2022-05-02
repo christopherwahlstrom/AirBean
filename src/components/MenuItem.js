@@ -1,7 +1,8 @@
 function MenuItem() {
     return (
-        <>
-        </>
+        <article>
+            some coffee
+        </article>
     );
 }
 
