@@ -2,10 +2,10 @@ import './App.css';
 
 import { Routes, Route } from 'react-router-dom';
 
-import Landing from './views/Landing';
-import Menu from './views/Menu';
-import About from './views/About';
-import Order from './views/Order';
+import Landing from './Views/Landing';
+import Menu from './Views/Menu';
+import About from './Views/About';
+import Order from './Views/Order';
 
 function App() {
   return (
