@@ -1,0 +1,22 @@
+.cart {
+    margin: 5.4rem auto;
+    margin-bottom: 0;
+    background-color: aqua;
+    width: 92%;
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.cart h1 {
+    color: #2F2926;
+}
+
+.cart h2 {
+    margin-top: auto;
+}
+
+.cart .cart-btn {
+    margin: 0;
+    align-self: center;
+}

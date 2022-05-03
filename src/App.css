@@ -10,6 +10,8 @@
 
 .App {
   text-align: center;
+  font-family: 'PT Serif', serif;
+  color: #2F2926;
 }
 
 .leafyBackground {
