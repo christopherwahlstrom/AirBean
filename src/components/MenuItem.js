@@ -1,13 +1,14 @@
 import './MenuItem.css';
 
-function MenuItem() {
+function MenuItem(props) {
+    const { title, desc, price } = props;
 
     return (
         <article className="menuItem">
             <button className="menuItem--button">+</button>
             <section>
-                <h2 className="menuItem--title">Bryggkaffe <span className="menuItem--price">49kr</span></h2>
-                <p className="menuItem--description">Bryggd på månadens bönor</p>
+                <h2 className="menuItem--title">{ title }<span className="menuItem--price">{price}</span></h2>
+                <p className="menuItem--description">{desc}</p>
             </section>
         </article>
     );
