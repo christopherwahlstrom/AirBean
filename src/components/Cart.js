@@ -1,4 +1,6 @@
-import './Cart.css'
+import './Cart.css';
+
+import { useNavigate } from 'react-router-dom';
 
 function Cart(props) {
     const { visible, setVisibleCart } = props;
@@ -16,9 +18,12 @@ function Cart(props) {
         }
     }
 
+    const navigate = useNavigate();
+
     function nexxxxxxxtPage() {
         console.log("click");
         setVisibleCart(false);
+        navigate('/order');
         /* MOVE ON TO NEXT PAGE IN ORDER */
     }
 

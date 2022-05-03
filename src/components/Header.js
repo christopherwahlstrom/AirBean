@@ -6,7 +6,9 @@ import shoppingBag from '../graphics/bag.svg';
 import navicon from '../graphics/navicon.svg';
 import { useState } from 'react';
 
-function Header() {
+function Header(props) {
+    const { setDarkness } = props;
+
     const [visibleNavMenu, setVisibleNavMenu] = useState(false);
     const [visibleCart, setVisibleCart] = useState(false);
 
@@ -17,6 +19,7 @@ function Header() {
         } else {
             setVisibleCart(false);
         }
+        setDarkness();
     }
     
     function showNav() {
