@@ -1,7 +1,7 @@
 import Style from './About.css';
-import TopDecor from '../graphics/._graphics-header.svg';
-import BottomDecor from '../graphics/._graphics-footer.svg';
-import CeoImage from '../graphics/._eva-cortado.jpg';
+import TopDecor from '../graphics/graphics-header.svg';
+import BottomDecor from '../graphics/graphics-footer.svg';
+import CeoImage from '../graphics/eva-cortado.jpg';
 
 const About = () => {
     return (
