@@ -11,14 +11,12 @@ function Cart(props) {
     }
 
     function closeOverlay(event) {
-        console.log("event.target.className: ", event.target.className);
-        console.log("classNames", classNames);
-        if(event.target.className === "classNames") {
-        setVisibleCart(false);
+        if(event.target.className === classNames) {
+            setVisibleCart(false);
         }
     }
 
-    function nextPage() {
+    function nexxxxxxxtPage() {
         console.log("click");
         setVisibleCart(false);
         /* MOVE ON TO NEXT PAGE IN ORDER */
@@ -35,7 +33,7 @@ function Cart(props) {
                     <h2 className='sum'>98 kr</h2>
                 </article>
                 <p>Inkl. moms + drönarleverans</p>
-                <button className='cart-btn' onClick={ nextPage }>Take my money!</button>
+                <button className='cart-btn' onClick={ nexxxxxxxtPage }>Take my money!</button>
             </article>
         </section>
     );
