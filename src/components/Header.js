@@ -11,7 +11,12 @@ function Header() {
     const [visibleCart, setVisibleCart] = useState(false);
 
     function showCart() {
-        setVisibleCart(true);
+        console.log(visibleCart);
+        if(!visibleCart) {
+            setVisibleCart(true);
+        } else {
+            setVisibleCart(false);
+        }
     }
     
     function showNav() {

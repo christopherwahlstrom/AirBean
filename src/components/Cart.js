@@ -10,14 +10,22 @@ function Cart(props) {
         classNames = "cart-wrapper";
     }
 
-    function closeOverlay() {
+    function closeOverlay(event) {
+        console.log("event.target.className: ", event.target.className);
+        console.log("classNames", classNames);
+        if(event.target.className === "classNames") {
+        setVisibleCart(false);
+        }
+    }
+
+    function nextPage() {
         console.log("click");
         setVisibleCart(false);
         /* MOVE ON TO NEXT PAGE IN ORDER */
     }
 
     return (
-        <section className={ classNames } >
+        <section className={ classNames } onClick={ closeOverlay } >
             <div className='triangle'></div>
             <article className='cart'>
                 <h1>Din Beställning</h1>
@@ -27,7 +35,7 @@ function Cart(props) {
                     <h2 className='sum'>98 kr</h2>
                 </article>
                 <p>Inkl. moms + drönarleverans</p>
-                <button className='cart-btn' onClick={ closeOverlay }>Take my money!</button>
+                <button className='cart-btn' onClick={ nextPage }>Take my money!</button>
             </article>
         </section>
     );
