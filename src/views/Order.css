@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&display=swap');
+
+.order-page {
+    width: 100vw;
+    height: 100vh;
+    background-color: #E5674E;
+}
+
+.bold {
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+p {
+    margin: 0;
+    padding-top: 65px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.minutes {
+    padding-top: 20px;
+    font-size: 22px;
+}
+
+h1 {
+    margin: 0;
+    font-family: 'PT Serif';
+    font-weight: 700;
+    font-size: 2.25rem;
+    padding-top: 40px;
+    color: #FFFFFF;
+}
+
+img {
+    padding-top: 43px;
+}
+
+button {
+    margin-top: 80px;
+    font-size: 24px;
+    font-weight: 700;
+    font-family: 'PT Serif';
+    width: 184px;
+    height: 55px;
+    background-color: #FFFFFF;
+    color: #2F2926;
+    border: none;
+    border-radius: 50px;
+}
