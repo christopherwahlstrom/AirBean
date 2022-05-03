@@ -11,19 +11,19 @@
     color: rgba(255, 255, 255, 0.7);
 }
 
-p {
+/*p {
     margin: 0;
     padding-top: 65px;
     font-weight: 400;
     color: rgba(255, 255, 255, 0.7);
-}
+}*/
 
 .minutes {
     padding-top: 20px;
     font-size: 22px;
 }
 
-h1 {
+/*h1 {
     margin: 0;
     font-family: 'PT Serif';
     font-weight: 700;
@@ -47,4 +47,4 @@ button {
     color: #2F2926;
     border: none;
     border-radius: 50px;
-}
+}*/
