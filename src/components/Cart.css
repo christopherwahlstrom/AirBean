@@ -18,12 +18,52 @@
 .cart h1 {
     color: #2F2926;
     font-size: 32px;
+    height: 100%;
 }
 
-.cart h2 {
+.sum-container {
+    display: flex;
+}
+
+.cart .total {
     margin-top: auto;
+    margin-left: 1rem;
+    font-size: 23px;
+}
+
+.cart .sum {
+    margin-left: auto;
+    margin-right: 1rem;
+}
+
+.cart p {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 12px;
+    margin: 0;
+    text-align: left;
+    margin-left: 1rem;
+}
+
+.dots {
+    height: 1px;
+    width: 40%;
+    border-bottom: 2px dotted rgba(0, 0, 0, 0.4);
+    align-self: flex-end;
+    margin-bottom: 1.5rem;
+    margin-left: 2rem;
 }
 
 .cart .cart-btn {
     align-self: center;
+    font-size: 24px;
+    background-color: #2F2926;
+    color: #ffffff;
+    font-family: 'PT Serif', serif;
+    font-weight: 700;
+    border: none;
+    padding: 0.75rem 1.87rem;
+    border-radius: 50px;
+    margin-bottom: 2.5rem;
+    margin-top: 2.5rem;
 }
+
