@@ -3,6 +3,7 @@ import './Cart.css'
 function Cart() {
     return (
         <section className='cart-wrapper'>
+            <div className='triangle'></div>
             <article className='cart'>
                 <h1>Din Beställning</h1>
                 <article className='sum-container'>
