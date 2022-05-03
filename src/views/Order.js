@@ -21,10 +21,10 @@ function Order() {
 
     return (
         <section className='order-page'>
-            <p>Ordernummer<span className='order-number'>{ order.orderNr }</span></p>
+            <p className='order'>Ordernummer <span className='order-number'>#{ order.orderNr }</span></p>
             <img src={ drone }></img>
             <h1>Din beställning <br /> är på väg!</h1>
-            <span className='time'>{ order.eta }</span><p className='minutes'>minuter</p>
+            <p className='time'>{ order.eta } <span className='minutes'>minuter</span></p>
             <button onClick={ () => { navigate('/menu') } }>Ok, cool!</button>
         </section>
     );
