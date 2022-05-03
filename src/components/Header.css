@@ -1,0 +1,22 @@
+.header {
+  min-height: 60px;
+  padding: 20px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header--icon {
+  width: 2rem;
+  height: 2rem;
+}
+.header--iconWrapper {
+  padding: 1rem;
+  border-radius: 50%;
+  display: flex;
+}
+
+.iconWrapper--nav { background-color: white; }
+.iconWrapper--cart { background-color: #2F2926; }
