@@ -11,7 +11,12 @@ function Header() {
     const [visibleCart, setVisibleCart] = useState(false);
 
     function showCart() {
-        setVisibleCart(true);
+        console.log(visibleCart);
+        if(!visibleCart) {
+            setVisibleCart(true);
+        } else {
+            setVisibleCart(false);
+        }
     }
     
     function showNav() {
@@ -28,7 +33,8 @@ function Header() {
                 <img src={ shoppingBag } alt="shopping bag" className="header--icon" />
             </section>
             
-            < NavMenu visible={visibleNavMenu} />
+            < NavMenu visible={visibleNavMenu} setVisibleNavMenu={ setVisibleNavMenu } />
+            < Cart visible={visibleCart} setVisibleCart={setVisibleCart} />
         </section>
     );
 }
