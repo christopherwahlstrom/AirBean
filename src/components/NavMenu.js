@@ -6,13 +6,16 @@ import { Link } from 'react-router-dom';
 
 function NavMenu(props) {
     const { visible } = props;
-    console.log(visible);
+    let classNames = "navmenu";
+
     if(visible) {
-        
+        classNames += " overlay-visible";
+    } else {
+        classNames = "navmenu";
     }
 
     return (
-        <article className="navmenu">
+        <article className={ classNames } visible={ visible }>
             <section className="btn-container">
                 <input className='close-btn' type="image" src={ buttonImg } alt="" />
             </section>

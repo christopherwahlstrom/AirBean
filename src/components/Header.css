@@ -20,7 +20,3 @@
 
 .iconWrapper--nav { background-color: white; }
 .iconWrapper--cart { background-color: #2F2926; }
-
-.overlay-visible {
-  display: flex;
-}
