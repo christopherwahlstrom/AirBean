@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Rufina:wght@400;700&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* font-family: 'Rufina', serif; */
+/* font-family: 'Work Sans', sans-serif; */
+
+.menuItem {
+  color: #2F2926;
+  text-align: left;
+  width: 90%;
+  margin-top: 20px;
+  font-family: 'Rufina', serif;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.menuItem--button {
+  height: 30px;
+  width: 30px;
+  margin: 10px;
+  border: 0;
+  border-radius: 50%;
+  background-color: #2F2926;
+  color: white;
+}
+
+.menuItem--title {
+  border-bottom: 1px dotted brown;
+  font-weight: 700;
+  line-height: 60%;
+  margin: 0;
+}
+
+.menuItem--price {
+  font-weight: 700;
+  padding-left: 7rem;
+}
+  
+.menuItem--description {
+  font-family: 'Work Sans', sans-serif; 
+  font-size: 0.8rem;
+  margin: 0;
+}
