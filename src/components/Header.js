@@ -29,6 +29,7 @@ function Header() {
             </section>
             
             < NavMenu visible={visibleNavMenu} setVisibleNavMenu={ setVisibleNavMenu } />
+            < Cart visible={visibleCart} setVisibleCart={setVisibleCart} />
         </section>
     );
 }

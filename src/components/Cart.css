@@ -1,6 +1,9 @@
 .cart-wrapper {
     width: 100%;
     height: 100%;
+    display: none;
+}
+.overlay-visible {
     display: flex;
 }
 
