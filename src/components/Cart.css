@@ -3,9 +3,10 @@
     margin-bottom: 0;
     background-color: aqua;
     width: 92%;
-    min-height: 85vh;
+    min-height: 70%;
     display: flex;
     flex-direction: column;
+    border-radius: 3px;
 }
 
 .cart h1 {
