@@ -10,12 +10,12 @@
 .triangle {
     width: 0; 
     height: 0; 
-    border-left: 15px solid #ffffff;
-    border-right: 15px solid #ffffff;
-    border-bottom: 15px solid rgb(0, 255, 255);
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #ffffff;
     position: absolute;
-    right: 10%;
-    top: 9.8%;
+    right: 8%;
+    top: 10.5%;
 }
 
 .cart {
@@ -23,7 +23,7 @@
     margin-top: 5rem;
     width: 92%;
     height: 86%;
-    background-color: aqua;
+    background-color: #ffffff;
     display: flex;
     flex-direction: column;
     border-radius: 3px;
