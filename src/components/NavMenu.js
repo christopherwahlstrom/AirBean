@@ -24,7 +24,6 @@ function NavMenu(props) {
                 <Link className='link' to="/order">Orderstatus</Link>
                 <hr />
             </nav>
-            
         </article>
     );
 }
