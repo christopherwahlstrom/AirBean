@@ -4,11 +4,17 @@ import buttonImg from '../graphics/close.svg';
 
 import { Link } from 'react-router-dom';
 
-function NavMenu() {
+function NavMenu(props) {
+    const { visible } = props;
+    console.log(visible);
+    if(visible) {
+        
+    }
+
     return (
         <article className="navmenu">
             <section className="btn-container">
-                <input className='close-btn' type="image" src={ buttonImg } />
+                <input className='close-btn' type="image" src={ buttonImg } alt="" />
             </section>
             <nav className="links">
                 <Link className='link' to="/menu">Meny</Link>
