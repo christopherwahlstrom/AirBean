@@ -28,7 +28,7 @@ function Header() {
                 <img src={ shoppingBag } alt="shopping bag" className="header--icon" />
             </section>
             
-            < NavMenu visible={visibleNavMenu} />
+            < NavMenu visible={visibleNavMenu} setVisibleNavMenu={ setVisibleNavMenu } />
         </section>
     );
 }

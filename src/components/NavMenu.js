@@ -5,7 +5,7 @@ import buttonImg from '../graphics/close.svg';
 import { Link } from 'react-router-dom';
 
 function NavMenu(props) {
-    const { visible } = props;
+    const { visible, setVisibleNavMenu } = props;
     let classNames = "navmenu";
 
     if(visible) {
@@ -14,10 +14,15 @@ function NavMenu(props) {
         classNames = "navmenu";
     }
 
+    function closeOverlay() {
+        console.log("click");
+        setVisibleNavMenu(false);
+    }
+
     return (
         <article className={ classNames } visible={ visible }>
             <section className="btn-container">
-                <input className='close-btn' type="image" src={ buttonImg } alt="" />
+                <input className='close-btn' type="image" src={ buttonImg } alt="" onClick={ closeOverlay } />
             </section>
             <nav className="links">
                 <Link className='link' to="/menu">Meny</Link>
