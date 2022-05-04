@@ -36,8 +36,10 @@ function Header(props) {
                 <img src={ shoppingBag } alt="shopping bag" className="header--icon" />
             </section>
             
-            < NavMenu visible={visibleNavMenu} setVisibleNavMenu={ setVisibleNavMenu } />
-            < Cart visible={visibleCart} setVisibleCart={setVisibleCart} />
+            <section className="orderAmount">10</section>
+
+            <NavMenu visible={visibleNavMenu} setVisibleNavMenu={ setVisibleNavMenu } />
+            <Cart visible={visibleCart} setVisibleCart={setVisibleCart} />
         </section>
     );
 }
