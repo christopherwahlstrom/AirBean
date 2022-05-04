@@ -2,10 +2,11 @@ import './Menu.css';
 
 import Header from '../components/Header';
 import MenuItem from '../components/MenuItem';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
-function Menu() {
-    const [menu, setMenu] = useState([]);
+function Menu(props) {
+
+    const { menu } = props;
 
     useEffect(() => {
         async function getMenu() {
@@ -15,6 +16,7 @@ function Menu() {
         }
         getMenu();
     }, []);
+
 
     const menuItems = menu.map((menuItem, index) => {
         return <MenuItem title={ menuItem.title } price={ menuItem.price } desc={ menuItem.desc } key={ index }/>

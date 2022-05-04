@@ -21,3 +21,13 @@
 
 .iconWrapper--nav { background-color: white; }
 .iconWrapper--cart { background-color: #2F2926; }
+
+.orderAmount {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 25px;
+  height: 25px;
+  background-color: #E5674E;
+  border-radius: 50%;
+}
