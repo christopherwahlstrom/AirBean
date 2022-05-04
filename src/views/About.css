@@ -4,7 +4,8 @@
     padding: auto 100px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .about h1 { 
@@ -14,25 +15,42 @@
     font-weight: 700;
     font-size: 42px;
     line-height: 120%;
+    text-align: left;
 }
+
+.about section h3 {
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
 
 .about p {
     width: 90vw;
     font-family: 'Work Sans';
-    font-style: normal;
     font-weight: 400;
     font-size: 12px;
-    line-height: 160%;
+    line-height: 19.2px;
+    text-align: left;
+    margin-left: 32px;
+    margin-right: 32px;
   }
+
+.about .bold {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 22.4px;
+}
+
 
 .about img {
     width: 74px;
     height: 74px;
     border-radius: 50px;
+    margin-top: 14px;
 }
 
-.founderContainer {
-    width: 90vw;
-    height: 126px;
+.about .title {
+    margin-top: 2px;
     text-align: center;
 }
+
