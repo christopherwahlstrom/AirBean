@@ -20,10 +20,13 @@
   height: 30px;
   width: 30px;
   margin: 10px;
+  padding: 10px;
   border: 0;
   border-radius: 50%;
   background-color: #2F2926;
-  color: white;
+  
+  display: flex;
+  
 }
 
 .menuItem--title {
