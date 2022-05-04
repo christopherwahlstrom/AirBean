@@ -1,11 +1,14 @@
 import './MenuItem.css';
+import AddIcon from '../graphics/add.svg';
 
 function MenuItem(props) {
     const { title, desc, price } = props;
 
     return (
         <article className="menuItem">
-            <button className="menuItem--button">+</button>
+            <section className="menuItem--button">
+                <img src={AddIcon} alt="add to cart" />
+            </section>
             <section>
                 <h2 className="menuItem--title">{ title }<span className="menuItem--price">{price}</span></h2>
                 <p className="menuItem--description">{desc}</p>
