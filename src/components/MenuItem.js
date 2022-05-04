@@ -2,6 +2,7 @@ import './MenuItem.css';
 
 import { useDispatch } from 'react-redux';
 import itemAction from '../actions/itemAction';
+import { useSelector } from 'react-redux';
 
 import AddIcon from '../graphics/add.svg';
 
@@ -11,8 +12,11 @@ function MenuItem(props) {
 
     const dispatch = useDispatch();
 
+    const cartItems = useSelector((state) => { return state.item });
+
     function addToCart() {
         dispatch(itemAction({ title: title, price: price }));
+        localStorage.setItem("cartItems", JSON.stringify(cartItems.item));
     }
 
     return (

@@ -12,13 +12,14 @@ function Cart(props) {
 
     const cartItems = useSelector((state) => { return state.item });
 
-    useEffect(() => {
-        localStorage.setItem("cartItems", JSON.stringify(cartItems.item));
-    }, [ ]);
-    
     /*
         fix so that localStorage gets items from redux and is saved properly
     */
+
+    useEffect(() => {
+        JSON.parse(localStorage.getItem('cartItems', cartItems));
+    }, []);
+    
 
     const menu = cartItems.item.map((item) => {
         
