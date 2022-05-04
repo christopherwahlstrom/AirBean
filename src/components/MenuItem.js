@@ -6,7 +6,9 @@ function MenuItem(props) {
 
     return (
         <article className="menuItem">
-            <img src={AddIcon} alt="add to cart" />
+            <section className="menuItem--button">
+                <img src={AddIcon} alt="add to cart" />
+            </section>
             <section>
                 <h2 className="menuItem--title">{ title }<span className="menuItem--price">{price}</span></h2>
                 <p className="menuItem--description">{desc}</p>
