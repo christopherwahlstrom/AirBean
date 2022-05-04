@@ -34,10 +34,11 @@
 .cart h1 {
     color: #2F2926;
     font-size: 32px;
-    height: 100%;
 }
 
 .sum-container {
+    margin-top: auto;
+    
     display: flex;
 }
 
@@ -52,7 +53,7 @@
     margin-right: 1rem;
 }
 
-.cart p {
+.cart > p {
     font-family: 'Work Sans', sans-serif;
     font-size: 12px;
     margin: 0;
@@ -83,7 +84,43 @@
     margin-top: 2.5rem;
 }
 
-.hidden {
-    display: none;
+
+.orderItem {
+    margin: 1rem;
+
+    display: flex;
 }
 
+.orderItem-dots {
+    width: 100%;
+    margin-bottom: 1.1rem;
+}
+
+.orderItem--title {
+    font-size: 20px;
+    text-align: left;
+    margin: 0;
+}
+
+.orderItem--price {
+    font-size: 12px;
+    font-weight: 400;
+    text-align: left;
+    margin: 0;
+}
+
+.orderItem--amountWrapper {
+    font-size: 14px;
+    font-weight: 600;
+    width: min-content;
+    margin-left: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.orderItem--amountWrapper * {
+    margin: 0;
+}

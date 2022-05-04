@@ -1,6 +1,8 @@
 import './Cart.css';
 
 import { useNavigate } from 'react-router-dom';
+import ArrowUp from '../graphics/arrow-up.svg';
+import ArrowDown from '../graphics/arrow-down.svg';
 
 function Cart(props) {
     const { visible, setVisibleCart } = props;
@@ -32,6 +34,21 @@ function Cart(props) {
             <div className='triangle'></div>
             <article className='cart'>
                 <h1>Din Beställning</h1>
+
+                <article className="orderItem">
+                    <section className="orderItem--texts">
+                        <h2 className="orderItem--title">Bryggkaffe</h2>
+                        <p className="orderItem--price">14 kr</p>
+                    </section>
+                    <section className='orderItem-dots dots'></section>
+
+                    <section className="orderItem--amountWrapper">
+                        <img src={ ArrowUp } alt="increase amount" />
+                        <p>1</p>
+                        <img src={ ArrowDown } alt="decrease amount" />
+                    </section>
+                </article>
+
                 <article className='sum-container'>
                     <h2 className='total'>Total</h2>
                     <section className='dots'></section>
