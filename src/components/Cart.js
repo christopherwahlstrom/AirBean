@@ -2,8 +2,21 @@ import './Cart.css';
 
 import { useNavigate } from 'react-router-dom';
 
+import { useSelector } from 'react-redux';
+
+import MenuItem from './MenuItem';
+
 function Cart(props) {
     const { visible, setVisibleCart } = props;
+
+    const menuItems = useSelector((state) => { return state.item });
+
+    const menu = menuItems.item.map((item) => {
+        return < MenuItem title={item.title} price={item.price}/>
+    });
+    
+    
+
     let classNames = "cart-wrapper";
 
     if(visible) {
@@ -32,6 +45,7 @@ function Cart(props) {
             <div className='triangle'></div>
             <article className='cart'>
                 <h1>Din Beställning</h1>
+                { menu }
                 <article className='sum-container'>
                     <h2 className='total'>Total</h2>
                     <section className='dots'></section>
