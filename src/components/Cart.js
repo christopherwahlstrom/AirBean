@@ -6,21 +6,39 @@ import ArrowDown from '../graphics/arrow-down.svg';
 
 import { useSelector } from 'react-redux';
 
-import MenuItem from './MenuItem';
-
 function Cart(props) {
     const { visible, setVisibleCart } = props;
 
     const menuItems = useSelector((state) => { return state.item });
 
+    localStorage.clear();
+    localStorage.setItem("cartItems", menuItems.item);
+    console.log(menuItems.item);
+
     const menu = menuItems.item.map((item) => {
-        return < MenuItem title={item.title} price={item.price}/>
+        return (
+            <article className="orderItem">
+                <section className="orderItem--texts">
+                    <h2 className="orderItem--title">{ item.title }</h2>
+                    <p className="orderItem--price">{ item.price } kr</p>
+                </section>
+
+                <section className='orderItem-dots dots'></section>
+
+                <section className="orderItem--amountWrapper">
+                    <img src={ ArrowUp } alt="increase amount" />
+                    <p>1</p>
+                    <img src={ ArrowDown } alt="decrease amount" />
+                </section>
+            </article>
+        );
     });
     
-    
+    /*
+     Use this somehow: menuItems.item.includes();
+    */
 
     let classNames = "cart-wrapper";
-
     if(visible) {
         classNames += " overlay-visible";
     } else {
@@ -48,20 +66,7 @@ function Cart(props) {
             <article className='cart'>
                 <h1>Din Beställning</h1>
 
-                <article className="orderItem">
-                    <section className="orderItem--texts">
-                        <h2 className="orderItem--title">Bryggkaffe</h2>
-                        <p className="orderItem--price">14 kr</p>
-                    </section>
-
-                    <section className='orderItem-dots dots'></section>
-
-                    <section className="orderItem--amountWrapper">
-                        <img src={ ArrowUp } alt="increase amount" />
-                        <p>1</p>
-                        <img src={ ArrowDown } alt="decrease amount" />
-                    </section>
-                </article>
+                { menu }
 
                 <article className='sum-container'>
                     <h2 className='total'>Total</h2>
