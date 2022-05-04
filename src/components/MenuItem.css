@@ -31,8 +31,8 @@
 
 .menuItem--title {
   border-bottom: 1px dotted brown;
-  font-weight: 700;
   line-height: 60%;
+  font-weight: 700;
   margin: 0;
 }
 
