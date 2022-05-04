@@ -4,8 +4,21 @@ import { useNavigate } from 'react-router-dom';
 import ArrowUp from '../graphics/arrow-up.svg';
 import ArrowDown from '../graphics/arrow-down.svg';
 
+import { useSelector } from 'react-redux';
+
+import MenuItem from './MenuItem';
+
 function Cart(props) {
     const { visible, setVisibleCart } = props;
+
+    const menuItems = useSelector((state) => { return state.item });
+
+    const menu = menuItems.item.map((item) => {
+        return < MenuItem title={item.title} price={item.price}/>
+    });
+    
+    
+
     let classNames = "cart-wrapper";
 
     if(visible) {
@@ -40,6 +53,7 @@ function Cart(props) {
                         <h2 className="orderItem--title">Bryggkaffe</h2>
                         <p className="orderItem--price">14 kr</p>
                     </section>
+
                     <section className='orderItem-dots dots'></section>
 
                     <section className="orderItem--amountWrapper">
