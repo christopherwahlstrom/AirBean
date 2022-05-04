@@ -5,17 +5,23 @@ import ArrowUp from '../graphics/arrow-up.svg';
 import ArrowDown from '../graphics/arrow-down.svg';
 
 import { useSelector } from 'react-redux';
+import { useEffect } from 'react';
 
 function Cart(props) {
     const { visible, setVisibleCart } = props;
 
-    const menuItems = useSelector((state) => { return state.item });
+    const cartItems = useSelector((state) => { return state.item });
 
-    localStorage.clear();
-    localStorage.setItem("cartItems", menuItems.item);
-    console.log(menuItems.item);
+    useEffect(() => {
+        localStorage.setItem("cartItems", JSON.stringify(cartItems.item));
+    }, [ ]);
+    
+    /*
+        fix so that localStorage gets items from redux and is saved properly
+    */
 
-    const menu = menuItems.item.map((item) => {
+    const menu = cartItems.item.map((item) => {
+        
         return (
             <article className="orderItem">
                 <section className="orderItem--texts">
@@ -54,6 +60,7 @@ function Cart(props) {
     const navigate = useNavigate();
 
     function nexxxxxxxtPage() {
+        localStorage.clear();
         console.log("click");
         setVisibleCart(false);
         navigate('/order');
