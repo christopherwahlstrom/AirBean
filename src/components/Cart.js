@@ -2,7 +2,7 @@ import './Cart.css';
 
 import { increment, decrement } from '../actions/counterAction';
 import { useNavigate } from 'react-router-dom';
-import MenuItem from './MenuItem';
+import CartItem from './CartItem';
 
 import { useSelector } from 'react-redux';
 // import { useEffect } from 'react';
@@ -35,13 +35,10 @@ function Cart(props) {
     }
 
 
-    const menu = cartItems.item.map((item) => {
-        return <MenuItem title={item.title} price={item.price}  /> ;
+    const orderItems = cartItems.item.map((item) => {
+        return <CartItem title={item.title} price={item.price}  /> ;
     });
-    
-    /*
-     Use this somehow: menuItems.item.includes();
-    */
+ 
 
     let classNames = "cart-wrapper";
     if(visible) {
@@ -72,7 +69,7 @@ function Cart(props) {
             <article className='cart'>
                 <h1>Din Beställning</h1>
 
-                { menu }
+                { orderItems }
 
                 <article className='sum-container'>
                     <h2 className='total'>Total</h2>
