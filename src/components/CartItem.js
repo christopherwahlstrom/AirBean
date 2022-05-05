@@ -10,13 +10,10 @@ import { useEffect } from 'react';
 
 
 function CartItem(props) {
-    let { title, price, quantity } = props;
+    let { title, price } = props;
 
     const dispatch = useDispatch();
 
-    const itemQuantity = useSelector((state) => { return state.item.quantity })
-
-    console.log(itemQuantity);
 
     // const cartItems = useSelector((state) => { return state.item });
 
@@ -31,7 +28,7 @@ function CartItem(props) {
 
         <section className="cartItem--amountWrapper">
           <img src={ ArrowUp } alt="increase amount" />
-          <p>{ itemQuantity }</p>
+          <p></p>
           <img src={ ArrowDown } alt="decrease amount" />
         </section>
       </article>
