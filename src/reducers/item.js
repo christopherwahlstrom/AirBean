@@ -1,8 +1,10 @@
 const initialState = {
-    item: []
+    item: [],
+    // quant: 1
 };
 
 const itemReducer = (state = initialState, action) => {
+    // console.log(action)
     switch(action.type) {
         case 'ADD_ITEM':
             return {
@@ -14,10 +16,26 @@ const itemReducer = (state = initialState, action) => {
             }
         case 'CLEAR':
             return state = [];
+
+        case 'INCREMENT':
+            console.log(state)
+            return {
+                ...state,
+                item: [
+                    ...state.item.quant,
+                    { quant: action.payload }
+                ] 
+            }
+        case 'DECREMENT':
+            return {
+                ...state,
+                quant: state.item.quant - action.payload
+            }
         default:
             return state;
     }
 }
 
-export default itemReducer
+export default itemReducer;
+
 
