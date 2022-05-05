@@ -15,7 +15,9 @@ function MenuItem(props) {
     // const cartItems = useSelector((state) => { return state.item });
 
     function addToCart() {
+
         dispatch(itemAction({ title: title, price: price, id: id }));
+
         console.log(title);
         // console.log(quant);
         // const cartItemsCopy = [...cartItems.item];
