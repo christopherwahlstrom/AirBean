@@ -30,10 +30,13 @@ function Header() {
             </section>
 
             <section className="header--iconWrapper iconWrapper--cart" onClick={ showCart } >
+                <section className="orderAmount">
+                    <p>10</p>
+                </section>
                 <img src={ shoppingBag } alt="shopping bag" className="header--icon" />
             </section>
             
-            <section className="orderAmount">10</section>
+            
 
             <NavMenu visible={visibleNavMenu} setVisibleNavMenu={ setVisibleNavMenu } />
             <Cart visible={visibleCart} setVisibleCart={setVisibleCart} />

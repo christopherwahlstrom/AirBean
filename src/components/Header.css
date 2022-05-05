@@ -19,8 +19,14 @@
   margin-top: 1.2rem;
 }
 
-.iconWrapper--nav { background-color: white; }
-.iconWrapper--cart { background-color: #2F2926; }
+.iconWrapper--nav { 
+  background-color: white;
+}
+
+.iconWrapper--cart {
+  background-color: #2F2926;
+  z-index: 98;
+}
 
 .orderAmount {
   position: absolute;
@@ -30,4 +36,14 @@
   height: 25px;
   background-color: #E5674E;
   border-radius: 50%;
+  z-index: 99;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.orderAmount p {
+  color: #ffffff;
+  font-size: 12px;
+  text-align: center;
 }

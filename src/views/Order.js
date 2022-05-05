@@ -12,7 +12,7 @@ function Order(props) {
     return (
         <section className='order-page'>
             <p className='order'>Ordernummer <span className='order-number'>#{ order.orderNr }</span></p>
-            <img src={ drone }></img>
+            <img src={ drone } alt=""></img>
             <h1>Din beställning <br /> är på väg!</h1>
             <p className='time'>{ order.eta } <span className='minutes'>minuter</span></p>
             <button onClick={ () => { navigate('/menu') } }>Ok, cool!</button>

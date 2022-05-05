@@ -1,0 +1,40 @@
+
+.cartItem {
+  margin: 1rem;
+
+  display: none;
+}
+
+.cartItem-dots {
+  width: 100%;
+  margin-bottom: 1.1rem;
+}
+
+.cartItem--title {
+  font-size: 20px;
+  text-align: left;
+  margin: 0;
+}
+
+.cartItem--price {
+  font-size: 12px;
+  font-weight: 400;
+  text-align: left;
+  margin: 0;
+}
+
+.cartItem--amountWrapper {
+  font-size: 14px;
+  font-weight: 600;
+  width: min-content;
+  margin-left: 10px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.cartItem--amountWrapper * {
+  margin: 0;
+}

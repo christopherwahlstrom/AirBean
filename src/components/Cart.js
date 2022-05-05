@@ -1,42 +1,44 @@
 import './Cart.css';
 
+import { increment, decrement } from '../actions/counterAction';
 import { useNavigate } from 'react-router-dom';
-import ArrowUp from '../graphics/arrow-up.svg';
-import ArrowDown from '../graphics/arrow-down.svg';
+import CartItem from './CartItem';
 
 import { useSelector } from 'react-redux';
+// import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+
 
 function Cart(props) {
     const { visible, setVisibleCart } = props;
 
-    const menuItems = useSelector((state) => { return state.item });
-
-    localStorage.clear();
-    localStorage.setItem("cartItems", menuItems.item);
-    console.log(menuItems.item);
-
-    const menu = menuItems.item.map((item) => {
-        return (
-            <article className="orderItem">
-                <section className="orderItem--texts">
-                    <h2 className="orderItem--title">{ item.title }</h2>
-                    <p className="orderItem--price">{ item.price } kr</p>
-                </section>
-
-                <section className='orderItem-dots dots'></section>
-
-                <section className="orderItem--amountWrapper">
-                    <img src={ ArrowUp } alt="increase amount" />
-                    <p>1</p>
-                    <img src={ ArrowDown } alt="decrease amount" />
-                </section>
-            </article>
-        );
-    });
-    
+    const cartItems = useSelector((state) => { return state.item });
+    const counter = useSelector((state) => { return state.counter.counter });
     /*
-     Use this somehow: menuItems.item.includes();
+        fix so that localStorage gets items from redux and is saved properly
     */
+
+    // useEffect(() => {
+    //     JSON.parse(localStorage.getItem(cartItems));
+    // }, []);
+
+    const dispatch = useDispatch();
+    
+    function handleIncrement() {
+        dispatch(increment(1));
+        console.log(counter)
+    }
+
+    function handleDecrement() {
+        dispatch(decrement(1));
+        console.log(counter)
+    }
+
+
+    const orderItems = cartItems.item.map((item) => {
+        return <CartItem title={item.title} price={item.price}  /> ;
+    });
+ 
 
     let classNames = "cart-wrapper";
     if(visible) {
@@ -54,6 +56,7 @@ function Cart(props) {
     const navigate = useNavigate();
 
     function nexxxxxxxtPage() {
+        localStorage.clear();
         console.log("click");
         setVisibleCart(false);
         navigate('/order');
@@ -66,7 +69,7 @@ function Cart(props) {
             <article className='cart'>
                 <h1>Din Beställning</h1>
 
-                { menu }
+                { orderItems }
 
                 <article className='sum-container'>
                     <h2 className='total'>Total</h2>
