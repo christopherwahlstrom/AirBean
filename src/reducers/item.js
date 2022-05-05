@@ -4,13 +4,16 @@ const initialState = {
 };
 
 const itemReducer = (state = initialState, action) => {
-    // console.log(action)
+    console.log("state.item: ", state.item);
+    console.log("action.payload: ", action.payload);
     switch(action.type) {
         case 'ADD_ITEM':
-            return {
-                ...state,
+           const newState = state.item.filter(items => items.title !== action.payload.title);  
+
+           return {
+                ...newState,
                 item: [
-                    ...state.item,
+                    ...newState,
                     action.payload
                 ]
             }
@@ -18,7 +21,6 @@ const itemReducer = (state = initialState, action) => {
             return state = [];
 
         case 'INCREMENT':
-            console.log(state)
             return {
                 ...state,
                 item: [
