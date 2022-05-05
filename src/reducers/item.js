@@ -10,8 +10,6 @@ const itemReducer = (state = initialState, action) => {
         case 'ADD_ITEM':
            const newState = state.item.filter(items => items.title !== action.payload.title);  
 
-           console.log("newState",newState);
-
            return {
                 ...newState,
                 item: [
@@ -19,15 +17,6 @@ const itemReducer = (state = initialState, action) => {
                     action.payload
                 ]
             }
-            /*
-            return {
-                ...state,
-                item: [
-                    ...state.item,
-                    action.payload
-                ]
-            }
-            */
         case 'CLEAR':
             return state = [];
 
