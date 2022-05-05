@@ -20,11 +20,7 @@ const itemReducer = (state = initialState, action) => {
         case 'INCREMENT':
             console.log(state)
             return {
-                ...state,
-                item: [
-                    ...state.item.quant,
-                    { quant: action.payload }
-                ] 
+                ...state
             }
         case 'DECREMENT':
             return {
