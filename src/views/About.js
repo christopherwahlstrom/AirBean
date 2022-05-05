@@ -1,4 +1,4 @@
-import Style from './About.css';
+import  './About.css';
 import CeoImage from '../graphics/eva-cortado.jpg';
 import Header from '../components/Header';
 
