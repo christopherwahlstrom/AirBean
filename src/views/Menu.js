@@ -6,14 +6,13 @@ import { useState } from 'react';
 
 function Menu(props) {
 
-    const { menu } = props;
+    const { menuAPI } = props;
 
-    const menuItems = menu.map((menuItem, index) => {
-        return <MenuItem quant={ 1 } title={ menuItem.title } price={ menuItem.price } desc={ menuItem.desc } key={ index }/>
+    const menuItems = menuAPI.map((menuItem, index) => {
+        return <MenuItem title={ menuItem.title } price={ menuItem.price } desc={ menuItem.desc } key={ index } id={ menuItem.id } />
     });
-    console.log(menuItems);
+    console.log(menuAPI);
     
-
     return (
         <article className="menu leafyBackground">
             <Header />

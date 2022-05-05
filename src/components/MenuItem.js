@@ -8,17 +8,19 @@ import AddIcon from '../graphics/add.svg';
 
 
 function MenuItem(props) {
-    const { title, desc, price, quant } = props;
+    const { title, desc, price, id } = props;
 
     const dispatch = useDispatch();
 
     // const cartItems = useSelector((state) => { return state.item });
 
     function addToCart() {
-        dispatch(itemAction({ title: title, price: price, quant: quant }));
+
+        dispatch(itemAction({ title: title, price: price, id: id }));
+
         console.log(title);
-        console.log(quant);
-        // const cartItemsCopy = [...cartItems.item]
+        // console.log(quant);
+        // const cartItemsCopy = [...cartItems.item];
         // localStorage.setItem("cartItems", JSON.stringify(cartItemsCopy));
     }
 

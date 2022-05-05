@@ -20,19 +20,6 @@ const itemReducer = (state = initialState, action) => {
         case 'CLEAR':
             return state = [];
 
-        case 'INCREMENT':
-            return {
-                ...state,
-                item: [
-                    ...state.item.quant,
-                    { quant: action.payload }
-                ] 
-            }
-        case 'DECREMENT':
-            return {
-                ...state,
-                quant: state.item.quant - action.payload
-            }
         default:
             return state;
     }
