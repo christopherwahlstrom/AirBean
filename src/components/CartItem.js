@@ -40,8 +40,6 @@ function CartItem(props) {
 
         <section className="cartItem--amountWrapper">
 
-          <img src={ ArrowUp } alt="increase amount" />
-          <p></p>
 
           <img onClick={ handleClick } src={ ArrowUp } alt="increase amount" />
           <p>{ quant }</p>
