@@ -10,14 +10,14 @@ import { useState, useEffect } from 'react';
 
 function App() {
 
-  const [menu, setMenu] = useState([]);
+  const [menuAPI, setMenuAPI] = useState([]);
   const [order, setOrder] = useState([]);
 
   useEffect(() => {
     async function getMenu() {
         const response = await fetch('https://my-json-server.typicode.com/zocom-christoffer-wallenberg/airbean/menu');
         const data = await response.json();
-        setMenu(data);
+        setMenuAPI(data);
       }
       getMenu();
   }, []);
@@ -32,12 +32,11 @@ function App() {
   }, []);
 
 
-
   return (
     <div className="App">
       <Routes>
         <Route path='/' element={ <Landing /> } />
-        <Route path='/menu' element={ <Menu menu={ menu }/> }/>
+        <Route path='/menu' element={ <Menu menuAPI={ menuAPI }/> }/>
         <Route path='/about' element={ <About /> }/>
         <Route path='/order' element={ <Order order={ order }/> }/>
       </Routes>

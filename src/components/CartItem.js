@@ -2,25 +2,28 @@ import './CartItem.css';
 
 import { useDispatch } from 'react-redux';
 import { increment, decrement } from '../actions/counterAction';
-import { INCREMENT } from '../actions/itemAction';
-// import { useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 
 import ArrowUp from '../graphics/arrow-up.svg';
 import ArrowDown from '../graphics/arrow-down.svg';
-
+import { useState } from 'react';
 
 function CartItem(props) {
-    const { title, price, quant } = props;
+    const { title, price, counter, id } = props;
+
+    // const [counter, setCounter] = useState(1);
 
     const dispatch = useDispatch();
 
-    // const cartItems = useSelector((state) => { return state.item });
+    // const counter = useSelector((state) => { return state.counter.counter });
 
-    function handleClick() {
-      // dispatch(counterAction(1));
+    function handleIncrement() {
       dispatch(increment(1));
     }
     
+    function handleDecrement() {
+      dispatch(decrement(1));
+    }
 
     return (
       <article className="cartItem">
@@ -32,9 +35,9 @@ function CartItem(props) {
         <section className="cartItem-dots dots"></section>
 
         <section className="cartItem--amountWrapper">
-          <img onClick={ handleClick } src={ ArrowUp } alt="increase amount" />
-          <p>{ quant }</p>
-          <img src={ ArrowDown } alt="decrease amount" />
+          <img id={ id } onClick={ handleIncrement } src={ ArrowUp } alt="increase amount" />
+          <p>{ counter }</p>
+          <img id={ id } onClick={ handleDecrement } src={ ArrowDown } alt="decrease amount" />
         </section>
       </article>
     );
