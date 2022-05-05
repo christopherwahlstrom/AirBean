@@ -23,7 +23,7 @@ function Cart(props) {
     // }, []);
 
     const dispatch = useDispatch();
-    
+
     function handleIncrement() {
         dispatch(increment(1));
         console.log(counter)
@@ -34,12 +34,10 @@ function Cart(props) {
         console.log(counter)
     }
 
-
     const orderItems = cartItems.item.map((item, index) => {
-        return <CartItem title={item.title} price={item.price} key={ index }  />
+        return <CartItem quant={ item.quant } title={item.title} price={item.price} key={ index }  />
     });
  
-
     let classNames = "cart-wrapper";
     if(visible) {
         classNames += " overlay-visible";
