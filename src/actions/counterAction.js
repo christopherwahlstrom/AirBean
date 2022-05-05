@@ -1,3 +1,4 @@
+/*
 const increment = (data) => {
     return {
         type: 'INCREMENT',
@@ -13,3 +14,4 @@ const decrement = (data) => {
 };
 
 export { increment, decrement }
+*/

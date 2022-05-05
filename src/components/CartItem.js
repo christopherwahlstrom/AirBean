@@ -2,16 +2,21 @@ import './CartItem.css';
 
 import { useDispatch } from 'react-redux';
 import itemAction from '../actions/itemAction';
-// import { useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 
 import ArrowUp from '../graphics/arrow-up.svg';
 import ArrowDown from '../graphics/arrow-down.svg';
+import { useEffect } from 'react';
 
 
 function CartItem(props) {
-    const { title, price } = props;
+    let { title, price, quantity } = props;
 
     const dispatch = useDispatch();
+
+    const itemQuantity = useSelector((state) => { return state.item.quantity })
+
+    console.log(itemQuantity);
 
     // const cartItems = useSelector((state) => { return state.item });
 
@@ -26,7 +31,7 @@ function CartItem(props) {
 
         <section className="cartItem--amountWrapper">
           <img src={ ArrowUp } alt="increase amount" />
-          <p>1</p>
+          <p>{ itemQuantity }</p>
           <img src={ ArrowDown } alt="decrease amount" />
         </section>
       </article>
