@@ -23,7 +23,7 @@ function Cart(props) {
     // }, []);
 
     const dispatch = useDispatch();
-
+    
     function handleIncrement() {
         dispatch(increment(1));
         console.log(counter)

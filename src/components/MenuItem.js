@@ -16,6 +16,8 @@ function MenuItem(props) {
 
     function addToCart() {
         dispatch(itemAction({ title: title, price: price }));
+        console.log('tjo!');
+        console.log(title);
         // const cartItemsCopy = [...cartItems.item]
         // localStorage.setItem("cartItems", JSON.stringify(cartItemsCopy));
     }

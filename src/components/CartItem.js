@@ -15,12 +15,6 @@ function CartItem(props) {
 
     // const cartItems = useSelector((state) => { return state.item });
 
-    function addToCart() {
-      dispatch(itemAction({ title: title, price: price }));
-      // const cartItemsCopy = [...cartItems.item]
-      // localStorage.setItem("cartItems", JSON.stringify(cartItemsCopy));
-    }
-
     return (
       <article className="cartItem">
         <section className="cartItem--texts">
