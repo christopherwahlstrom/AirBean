@@ -1,6 +1,7 @@
 
 .cartItem {
   margin: 1rem;
+  display: flex;
 }
 
 .cartItem-dots {
