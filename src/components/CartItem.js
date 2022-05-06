@@ -19,7 +19,7 @@ function CartItem(props) {
 
     function handleIncrement() {
       dispatch(increment(id));
-      console.log(counter)
+      console.log(id);
     }
     
     function handleDecrement() {
@@ -37,7 +37,7 @@ function CartItem(props) {
 
         <section className="cartItem--amountWrapper">
           <img id={ id } onClick={ handleIncrement } src={ ArrowUp } alt="increase amount" />
-          <p>{ counter }</p>
+          <p>{ counter[id] }</p>
           <img id={ id } onClick={ handleDecrement } src={ ArrowDown } alt="decrease amount" />
         </section>
       </article>
