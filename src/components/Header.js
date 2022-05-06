@@ -7,10 +7,12 @@ import navicon from '../graphics/navicon.svg';
 import { useState } from 'react';
 
 function Header() {
-
     const [visibleNavMenu, setVisibleNavMenu] = useState(false);
     const [visibleCart, setVisibleCart] = useState(false);
 
+    console.log("header - visibleNavMenu", visibleNavMenu);
+    console.log("header - visibleCart", visibleCart);
+    
     function showCart() {
         if(!visibleCart) {
             setVisibleCart(true);
@@ -35,7 +37,6 @@ function Header() {
                 </section>
                 <img src={ shoppingBag } alt="shopping bag" className="header--icon" />
             </section>
-            
             
 
             <NavMenu visible={visibleNavMenu} setVisibleNavMenu={ setVisibleNavMenu } />

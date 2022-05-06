@@ -20,7 +20,7 @@ function NavMenu(props) {
     }
 
     return (
-        <article className={ classNames } visible={ visible }>
+        <article className={ classNames }>
             <section className="btn-container">
                 <input className='close-btn' type="image" src={ buttonImg } alt="" onClick={ closeOverlay } />
             </section>

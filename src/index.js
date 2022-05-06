@@ -4,10 +4,8 @@ import './index.css';
 import App from './App';
 
 import { Provider } from 'react-redux';
-
 import { createStore } from 'redux';
-
-import allReducers from './reducers';
+import allReducers from './reducers/itemReducer';
 import { BrowserRouter } from 'react-router-dom';
 
 const container = document.getElementById('root');
