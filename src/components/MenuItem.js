@@ -23,6 +23,7 @@ function MenuItem(props) {
     useEffect(() => {
         JSON.parse(localStorage.getItem("cartItems"));
     }, []);
+    // DENNA MÅSTE SPARAS I STATE, och kollas vid klicket
 
     function addToCart() {
         dispatch(itemAction({ title: title, price: price, id: id, counter: counter }));

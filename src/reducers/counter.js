@@ -13,8 +13,6 @@ const counterReducer =  (state = initialState, action) => {
                 }
             });
 
-
-
         case 'DECREMENT':
             return {
                 ...state,
