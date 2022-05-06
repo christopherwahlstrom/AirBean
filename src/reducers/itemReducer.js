@@ -10,14 +10,20 @@ const cartItemReducer = (state = initialState, action) => {
 
   switch(action.type) {
     case 'ADD_ITEM':
-      const newState = state.cartItems.filter(items => items.title !== action.payload.title); 
-      action.payload.key = newState.length;
+      const filterdState = state.cartItems.filter(item => item.title !== action.payload.title); // no dupes plz
+      
+      if(filterdState.length == state.cartItems.length) {
+        action.payload.key = state.cartItems.length;
+        return {
+          ...filterdState,
+          cartItems: [
+            ...filterdState,
+            action.payload
+          ]
+        }
+      }
       return {
-        ...newState,
-        cartItems: [
-          ...newState,
-          action.payload
-        ]
+        ...state
       }
       default:
         return state

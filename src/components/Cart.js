@@ -13,8 +13,7 @@ function Cart(props) {
     let classNames = "cart-wrapper";
     
     let orderItems;
-    orderItems = cartItems.map((item, index) => {
-        console.log(item);
+    orderItems = cartItems.map((item) => {
         return <CartItem quantity={ item.quantity } title={item.title} price={item.price} key={ item.key } />
     });
     
