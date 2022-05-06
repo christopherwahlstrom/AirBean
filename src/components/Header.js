@@ -5,12 +5,14 @@ import NavMenu from './NavMenu';
 import shoppingBag from '../graphics/bag.svg';
 import navicon from '../graphics/navicon.svg';
 import { useState } from 'react';
+import { useSelector } from 'react-redux';
 
 function Header() {
-
     const [visibleNavMenu, setVisibleNavMenu] = useState(false);
     const [visibleCart, setVisibleCart] = useState(false);
 
+    const cartItems = useSelector((state) => { return state.cartItems });
+    
     function showCart() {
         if(!visibleCart) {
             setVisibleCart(true);
@@ -23,6 +25,11 @@ function Header() {
         setVisibleNavMenu(true);
     }
 
+    let styling;
+    if(cartItems.length == 0) {
+        styling = {display: 'none'};
+    }
+
     return (
         <section className="header">
             <section className="header--iconWrapper iconWrapper--nav" onClick={ showNav }>
@@ -30,12 +37,11 @@ function Header() {
             </section>
 
             <section className="header--iconWrapper iconWrapper--cart" onClick={ showCart } >
-                <section className="orderAmount">
-                    <p>10</p>
+                <section className="orderAmount" style={styling}>
+                    <p>{ cartItems.length }</p>
                 </section>
                 <img src={ shoppingBag } alt="shopping bag" className="header--icon" />
             </section>
-            
             
 
             <NavMenu visible={visibleNavMenu} setVisibleNavMenu={ setVisibleNavMenu } />

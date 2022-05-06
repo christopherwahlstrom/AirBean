@@ -1,44 +1,22 @@
 import './Cart.css';
 
-import { increment, decrement } from '../actions/counterAction';
 import { useNavigate } from 'react-router-dom';
 import CartItem from './CartItem';
 
 import { useSelector } from 'react-redux';
-// import { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
 
 
 function Cart(props) {
+    const cartItems = useSelector((state) => { return state.cartItems });
     const { visible, setVisibleCart } = props;
-
-    const cartItems = useSelector((state) => { return state.item });
-    const counter = useSelector((state) => { return state.counter.counter });
-    /*
-        fix so that localStorage gets items from redux and is saved properly
-    */
-
-    // useEffect(() => {
-    //     JSON.parse(localStorage.getItem(cartItems));
-    // }, []);
-
-    const dispatch = useDispatch();
-
-    function handleIncrement() {
-        dispatch(increment(1));
-        console.log(counter)
-    }
-
-    function handleDecrement() {
-        dispatch(decrement(1));
-        console.log(counter)
-    }
-
-    const orderItems = cartItems.item.map((item, index) => {
-        return <CartItem quant={ item.quant } title={item.title} price={item.price} key={ index }  />
-    });
- 
+    const navigate = useNavigate();
     let classNames = "cart-wrapper";
+    
+    const orderItems = cartItems.map((item) => {
+        return <CartItem quantity={ item.quantity } title={item.title} price={item.price} key={ item.key } />
+    });
+    
+    
     if(visible) {
         classNames += " overlay-visible";
     } else {
@@ -50,8 +28,6 @@ function Cart(props) {
             setVisibleCart(false);
         }
     }
-
-    const navigate = useNavigate();
 
     function nexxxxxxxtPage() {
         localStorage.clear();

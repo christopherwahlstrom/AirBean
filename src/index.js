@@ -4,17 +4,15 @@ import './index.css';
 import App from './App';
 
 import { Provider } from 'react-redux';
-
 import { createStore } from 'redux';
-
-import allReducers from './reducers';
+import cartItemReducer from './reducers/itemReducer';
 import { BrowserRouter } from 'react-router-dom';
 
 const container = document.getElementById('root');
 const root = createRoot(container);
 
 const store = createStore(
-  allReducers,
+  cartItemReducer,
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
 

@@ -2,7 +2,6 @@ import './Menu.css';
 
 import Header from '../components/Header';
 import MenuItem from '../components/MenuItem';
-import { useState } from 'react';
 
 function Menu(props) {
 
@@ -11,7 +10,6 @@ function Menu(props) {
     const menuItems = menu.map((menuItem, index) => {
         return <MenuItem quant={ 1 } title={ menuItem.title } price={ menuItem.price } desc={ menuItem.desc } key={ index }/>
     });
-    console.log(menuItems);
     
 
     return (

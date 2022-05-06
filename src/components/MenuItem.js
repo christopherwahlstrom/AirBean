@@ -1,25 +1,24 @@
 import './MenuItem.css';
 
 import { useDispatch } from 'react-redux';
-import itemAction from '../actions/itemAction';
-// import { useSelector } from 'react-redux';
+import { addItemAction } from '../actions/cartActions';
 
 import AddIcon from '../graphics/add.svg';
 
 
 function MenuItem(props) {
-    const { title, desc, price, quant } = props;
-
+    const { title, desc, price } = props;
     const dispatch = useDispatch();
-
-    // const cartItems = useSelector((state) => { return state.item });
-
+    
     function addToCart() {
-        dispatch(itemAction({ title: title, price: price, quant: quant }));
-        console.log(title);
-        console.log(quant);
-        // const cartItemsCopy = [...cartItems.item]
-        // localStorage.setItem("cartItems", JSON.stringify(cartItemsCopy));
+        const initialQuantity = 1;
+
+        dispatch(addItemAction({ 
+            title: title, 
+            price: price, 
+            quantity: initialQuantity,
+            key: 0
+        }));
     }
 
     return (
