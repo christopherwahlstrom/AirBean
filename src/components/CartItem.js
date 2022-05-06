@@ -18,7 +18,8 @@ function CartItem(props) {
     // const counter = useSelector((state) => { return state.counter.counter });
 
     function handleIncrement() {
-      dispatch(increment(1));
+      dispatch(increment(id));
+      console.log(counter)
     }
     
     function handleDecrement() {

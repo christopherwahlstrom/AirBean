@@ -1,7 +1,7 @@
-const increment = (data) => {
+const increment = (id) => {
     return {
         type: 'INCREMENT',
-        payload: data
+        payload: id
     };
 };
 

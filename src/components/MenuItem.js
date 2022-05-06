@@ -2,7 +2,7 @@ import './MenuItem.css';
 
 import { useDispatch } from 'react-redux';
 import itemAction from '../actions/itemAction';
-// import { useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 
 import AddIcon from '../graphics/add.svg';
 
@@ -12,11 +12,12 @@ function MenuItem(props) {
 
     const dispatch = useDispatch();
 
-    // const cartItems = useSelector((state) => { return state.item });
+    const counter = useSelector((state) => { return state.counter.counter });
+console.log(counter)
 
     function addToCart() {
 
-        dispatch(itemAction({ title: title, price: price, id: id }));
+        dispatch(itemAction({ title: title, price: price, id: id, counter: counter }));
 
         console.log(title);
         // console.log(quant);
