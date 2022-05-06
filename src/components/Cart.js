@@ -7,13 +7,14 @@ import { useSelector } from 'react-redux';
 
 
 function Cart(props) {
-    const cartItems = useSelector((state) => { return state });
+    //const cartItems = useSelector((state) => { return state.item });
+    const cartItems = useSelector((state) => { return state.cartItems });
     const { visible, setVisibleCart } = props;
     const navigate = useNavigate();
     let classNames = "cart-wrapper";
     
     let orderItems;
-    orderItems = cartItems.item.map((item, index) => {
+    orderItems = cartItems.map((item, index) => {
         console.log(item);
         return <CartItem quantity={ item.quantity } title={item.title} price={item.price} key={ index } />
     });

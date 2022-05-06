@@ -1,4 +1,5 @@
-const initialState = { item: []};
+//const initialState = { item: []};
+const initialState = { cartItems: []};
 
 const cartItemReducer = (state = initialState, action) => {
   console.log("itemReducer - initialState: ", initialState);
@@ -8,10 +9,11 @@ const cartItemReducer = (state = initialState, action) => {
 
   switch(action.type) {
     case 'ADD_ITEM_TO_CART':
-      const newState = state.item.filter(items => items.title !== action.payload.title); 
+      //const newState = state.item.filter(items => items.title !== action.payload.title); 
+      const newState = state.cartItems.filter(items => items.title !== action.payload.title); 
       return {
         ...newState,
-        item: [
+        cartItems: [
           ...newState,
           action.payload
         ]
