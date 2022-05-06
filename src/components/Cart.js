@@ -7,7 +7,6 @@ import { useSelector } from 'react-redux';
 
 
 function Cart(props) {
-    //const cartItems = useSelector((state) => { return state.item });
     const cartItems = useSelector((state) => { return state.cartItems });
     const { visible, setVisibleCart } = props;
     const navigate = useNavigate();
