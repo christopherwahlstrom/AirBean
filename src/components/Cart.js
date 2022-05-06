@@ -15,7 +15,7 @@ function Cart(props) {
     let orderItems;
     orderItems = cartItems.map((item, index) => {
         console.log(item);
-        return <CartItem quantity={ item.quantity } title={item.title} price={item.price} key={ index } />
+        return <CartItem quantity={ item.quantity } title={item.title} price={item.price} key={ item.key } />
     });
     
     

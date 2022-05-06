@@ -1,7 +1,7 @@
 import './MenuItem.css';
 
 import { useDispatch } from 'react-redux';
-import { addItemToCartAction } from '../actions/cartActions';
+import { addItemAction } from '../actions/cartActions';
 
 import AddIcon from '../graphics/add.svg';
 
@@ -13,10 +13,11 @@ function MenuItem(props) {
     function addToCart() {
         const initialQuantity = 1;
 
-        dispatch(addItemToCartAction({ 
+        dispatch(addItemAction({ 
             title: title, 
             price: price, 
-            quantity: initialQuantity 
+            quantity: initialQuantity,
+            key: 0
         }));
     }
 
