@@ -13,7 +13,6 @@ function MenuItem(props) {
     const dispatch = useDispatch();
 
     const counter = useSelector((state) => { return state.counter.counter });
-console.log(counter)
 
     function addToCart() {
 
