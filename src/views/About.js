@@ -1,11 +1,11 @@
 import  './About.css';
 import CeoImage from '../graphics/eva-cortado.jpg';
-import Header from '../components/Header';
+import HeaderAbout from '../components/HeaderAbout';
 
 const About = () => {
     return (
         <article className='leafyBackground'>
-            <Header />
+            <HeaderAbout />
             <section className="about">
                 <h1> Vårt Kaffe </h1>
                 <p className='bold'>Pumpkin spice mug, barista cup, sit macchiato, kopi-luwak, doppio, grounds dripper, crema, strong whipped, variety extra iced id lungo half and half mazagran. Pumpkin spice.</p>
