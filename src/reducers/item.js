@@ -4,8 +4,8 @@ const initialState = {
 };
 
 const itemReducer = (state = initialState, action) => {
-    console.log("state.item: ", state.item);
-    console.log("action.payload: ", action.payload);
+    // console.log("state.item: ", state.item);
+    // console.log("action.payload: ", action.payload);
     switch(action.type) {
         case 'ADD_ITEM':
            const newState = state.item.filter(items => items.title !== action.payload.title);  

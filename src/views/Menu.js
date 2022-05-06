@@ -2,7 +2,7 @@ import './Menu.css';
 
 import Header from '../components/Header';
 import MenuItem from '../components/MenuItem';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 function Menu(props) {
 

@@ -5,24 +5,33 @@ import itemAction from '../actions/itemAction';
 import { useSelector } from 'react-redux';
 
 import AddIcon from '../graphics/add.svg';
+import CartItem from './CartItem';
+import { useEffect, useState } from 'react';
 
 
 function MenuItem(props) {
     const { title, desc, price, id } = props;
-
+    
     const dispatch = useDispatch();
 
     const counter = useSelector((state) => { return state.counter.counter });
+    // console.log(counter)
+
+    const cartItems = useSelector((state) => { return state.item });
+    console.log(cartItems.item);
+
+    useEffect(() => {
+        JSON.parse(localStorage.getItem("cartItems"));
+    }, []);
 
     function addToCart() {
-
         dispatch(itemAction({ title: title, price: price, id: id, counter: counter }));
-
         console.log(title);
-        // console.log(quant);
-        // const cartItemsCopy = [...cartItems.item];
-        // localStorage.setItem("cartItems", JSON.stringify(cartItemsCopy));
+        
+        const cartItemsCopy = [...cartItems.item];
+        localStorage.setItem("cartItems", JSON.stringify(cartItemsCopy));
     }
+
 
     return (
         <article className="menuItem">

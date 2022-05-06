@@ -4,7 +4,7 @@ import { increment, decrement } from '../actions/counterAction';
 import { useNavigate } from 'react-router-dom';
 import CartItem from './CartItem';
 import { useSelector } from 'react-redux';
-// import { useEffect } from 'react';
+import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 
 
@@ -21,7 +21,13 @@ function Cart(props) {
     //     JSON.parse(localStorage.getItem(cartItems));
     // }, []);
 
-    console.log(cartItems)
+    useEffect(() => {
+        JSON.parse(localStorage.getItem("cartItems"));
+    }, []);
+
+    // console.log(cartItems)
+
+
 
     const dispatch = useDispatch();
 
