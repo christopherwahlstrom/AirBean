@@ -12,8 +12,8 @@ function Cart(props) {
     const navigate = useNavigate();
     let classNames = "cart-wrapper";
     
-    const orderItems = cartItems.map((item) => {
-        return <CartItem quantity={ item.quantity } title={item.title} price={item.price} key={ item.key } />
+    const orderItems = cartItems.map((item, index) => {
+        return <CartItem quantity={ item.quantity } id={ index } title={item.title} price={item.price} key={ index } />
     });
     
     

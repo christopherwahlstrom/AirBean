@@ -5,3 +5,17 @@ export const addItemAction = (data) => {
         payload: data
     }
 }
+
+export const addQuantity = (id) => {
+    return {
+        type: 'ADD_QUANTITY',
+        payload: id
+    }
+}
+
+export const decreaseQuantity = (id) => {
+    return {
+        type: 'DECREASE_QUANTITY',
+        payload: id
+    }
+}

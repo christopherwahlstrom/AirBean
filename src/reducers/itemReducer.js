@@ -25,8 +25,41 @@ const cartItemReducer = (state = initialState, action) => {
       return {
         ...state
       }
-      default:
-        return state
+      
+    case 'ADD_QUANTITY':
+
+      const copyCartItems = [...state.cartItems];
+      const newCartItems = copyCartItems.map((item) => {
+        if (action.payload === item.key) {
+          item.quantity += 1
+          return item
+        }
+        return item
+
+      });
+      return {
+        ...state,
+        cartItems: newCartItems
+      }
+
+    case 'DECREASE_QUANTITY':
+
+      const copycartItems = [...state.cartItems];
+      const newcartItems = copycartItems.map((item) => {
+        if (action.payload === item.key) {
+          item.quantity -= 1
+          return item
+        }
+        return item
+
+      });
+      return {
+        ...state,
+        cartItems: newcartItems
+      }
+
+    default:
+      return state
   }
 }
 
