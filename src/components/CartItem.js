@@ -3,9 +3,26 @@ import './CartItem.css';
 import ArrowUp from '../graphics/arrow-up.svg';
 import ArrowDown from '../graphics/arrow-down.svg';
 
+import { addQuantity } from '../actions/cartActions';
+import { decreaseQuantity } from '../actions/cartActions';
+import { useDispatch } from 'react-redux';
+
 
 function CartItem(props) {
-    const { title, price, quantity } = props;
+    const { title, price, quantity, id } = props;
+
+    const dispatch = useDispatch();
+
+
+    function addQuant() {
+      dispatch(addQuantity(id))
+      console.log(id);
+    }
+
+    function decreaseQuant() {
+      dispatch(decreaseQuantity(id))
+    }
+
 
     return (
       <article className="cartItem">
@@ -17,9 +34,9 @@ function CartItem(props) {
         <section className="cartItem-dots dots"></section>
 
         <section className="cartItem--amountWrapper">
-          <img src={ ArrowUp } alt="increase amount" />
+          <img onClick={ addQuant } src={ ArrowUp } alt="increase amount" />
           <p>{ quantity }</p>
-          <img src={ ArrowDown } alt="decrease amount" />
+          <img onClick={ decreaseQuant } src={ ArrowDown } alt="decrease amount" />
         </section>
       </article>
     );
