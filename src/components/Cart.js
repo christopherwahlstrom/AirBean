@@ -3,10 +3,9 @@ import './Cart.css';
 import { useNavigate } from 'react-router-dom';
 import CartItem from './CartItem';
 
-import { useSelector } from 'react-redux';
-import { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 
-import { useDispatch } from 'react-redux';
+import { emptyCart } from '../actions/cartActions';
 
 
 function Cart(props) {
@@ -52,9 +51,12 @@ function Cart(props) {
         }
     }
 
+    const dispatch = useDispatch();
+
     function nexxxxxxxtPage() {
         localStorage.clear();
         setVisibleCart(false);
+        dispatch(emptyCart());
         navigate('/order');
         /* MOVE ON TO NEXT PAGE IN ORDER */
     }
