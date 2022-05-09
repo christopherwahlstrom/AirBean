@@ -4,6 +4,9 @@ import { useNavigate } from 'react-router-dom';
 import CartItem from './CartItem';
 
 import { useSelector } from 'react-redux';
+import { useEffect } from 'react';
+
+import { useDispatch } from 'react-redux';
 
 
 function Cart(props) {

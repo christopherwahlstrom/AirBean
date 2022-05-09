@@ -10,7 +10,6 @@ function Menu(props) {
     const menuItems = menu.map((menuItem, index) => {
         return <MenuItem quant={ 1 } title={ menuItem.title } price={ menuItem.price } desc={ menuItem.desc } key={ index }/>
     });
-    
 
     return (
         <article className="menu leafyBackground">
