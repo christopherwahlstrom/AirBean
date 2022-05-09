@@ -6,6 +6,7 @@ import ArrowDown from '../graphics/arrow-down.svg';
 import { addQuantity } from '../actions/cartActions';
 import { decreaseQuantity } from '../actions/cartActions';
 import { useDispatch } from 'react-redux';
+import { deleteItem } from '../actions/cartActions';
 
 
 function CartItem(props) {
@@ -21,6 +22,7 @@ function CartItem(props) {
 
     function decreaseQuant() {
       dispatch(decreaseQuantity(id))
+      dispatch(deleteItem(id))
     }
 
 
