@@ -17,35 +17,25 @@ function Cart(props) {
         return <CartItem quantity={ item.quantity } title={item.title} price={item.price} key={ index } />
     });
 
-    /* Om du köper en Bryggkaffe och en Gustav Adolfsbakelse får du den för ett kampanjpris av 40 kr
-    
-    */
-   let bryggkaffe = 0;
-   let bakelse = 0;
-   let discount = 38;
+
+   let coffee = 0;
+   let pastry = 0;
+   const discount = 38;
     for(let item of cartItems) {
         totalPrice += item.price * item.quantity;
 
         if(item.title === "Bryggkaffe"){
-            console.log("Det finns bryggkaffe!");
-            bryggkaffe = item.quantity;
+            coffee = item.quantity;
         }else if(item.title === "Gustav Adolfsbakelse"){
-            bakelse = item.quantity;
-            console.log("Det finns Gustav Adolfsbakelse!");
+            pastry = item.quantity;
         }
-        // Kolla hur många Bryggkaffe och Gustav Adolfsbakelse det finns
-        // och välj det lägsta antalet för att lägga på rabatten (49kr) för varje kombo
     }
-    console.log("antal bryggkaffe: ", bryggkaffe);
-    console.log("antal bakelser: ", bakelse);
-    console.log("total price före rabatt: ", totalPrice);
     
-    if(bryggkaffe > bakelse){
-        totalPrice -= bakelse * discount;
+    if(coffee > pastry){
+        totalPrice -= pastry * discount;
     } else {
-        totalPrice -= bryggkaffe * discount;
+        totalPrice -= coffee * discount;
     }
-    console.log("total price efter rabatt: ", totalPrice);
 
     if(visible) {
         classNames += " overlay-visible";
