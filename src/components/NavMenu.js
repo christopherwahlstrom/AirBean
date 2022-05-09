@@ -25,11 +25,11 @@ function NavMenu(props) {
                 <input className='close-btn' type="image" src={ buttonImg } alt="" onClick={ closeOverlay } />
             </section>
             <nav className="links">
-                <Link className='link' to="/menu">Meny</Link>
+                <Link onClick={ closeOverlay } className='link' to="/menu">Meny</Link>
                 <hr />
-                <Link className='link' to="/about">Vårt kaffe</Link>
+                <Link onClick={ closeOverlay } className='link' to="/about">Vårt kaffe</Link>
                 <hr />
-                <Link className='link' to="/order">Orderstatus</Link>
+                <Link onClick={ closeOverlay } className='link' to="/order">Orderstatus</Link>
                 <hr />
             </nav>
         </article>
