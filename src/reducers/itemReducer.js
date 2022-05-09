@@ -12,6 +12,7 @@ const cartItemReducer = (state = initialState, action) => {
 
   switch(action.type) {
     case 'ADD_ITEM':
+
       const copyArray = [...state.cartItems];
       const filterdState = copyArray.filter(item => item.title !== action.payload.title); // no dupes plz
       
