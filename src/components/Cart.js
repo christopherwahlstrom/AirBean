@@ -11,12 +11,32 @@ function Cart(props) {
     const { visible, setVisibleCart } = props;
     const navigate = useNavigate();
     let classNames = "cart-wrapper";
-    
+    let totalPrice = 0;
+
     const orderItems = cartItems.map((item, index) => {
-        return <CartItem quantity={ item.quantity } id={ index } title={item.title} price={item.price} key={ index } />
+        return <CartItem quantity={ item.quantity } title={item.title} price={item.price} key={ index } />
     });
+
+
+   let coffee = 0;
+   let pastry = 0;
+   const discount = 38;
+    for(let item of cartItems) {
+        totalPrice += item.price * item.quantity;
+
+        if(item.title === "Bryggkaffe"){
+            coffee = item.quantity;
+        }else if(item.title === "Gustav Adolfsbakelse"){
+            pastry = item.quantity;
+        }
+    }
     
-    
+    if(coffee > pastry){
+        totalPrice -= pastry * discount;
+    } else {
+        totalPrice -= coffee * discount;
+    }
+
     if(visible) {
         classNames += " overlay-visible";
     } else {
@@ -31,7 +51,6 @@ function Cart(props) {
 
     function nexxxxxxxtPage() {
         localStorage.clear();
-        console.log("click");
         setVisibleCart(false);
         navigate('/order');
         /* MOVE ON TO NEXT PAGE IN ORDER */
@@ -48,7 +67,7 @@ function Cart(props) {
                 <article className='sum-container'>
                     <h2 className='total'>Total</h2>
                     <section className='dots'></section>
-                    <h2 className='sum'>98 kr</h2>
+                    <h2 className='sum'>{ totalPrice } kr</h2>
                 </article>
                 <p>Inkl. moms + drönarleverans</p>
                 <button className='cart-btn' onClick={ nexxxxxxxtPage }>Take my money!</button>

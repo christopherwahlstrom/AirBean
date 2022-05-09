@@ -6,23 +6,23 @@ export const addItemAction = (data) => {
     }
 }
 
-export const addQuantity = (id) => {
+export const addQuantity = (data) => {
     return {
         type: 'ADD_QUANTITY',
-        payload: id
+        payload: data
     }
 }
 
-export const decreaseQuantity = (id) => {
+export const decreaseQuantity = (data) => {
     return {
         type: 'DECREASE_QUANTITY',
-        payload: id
+        payload: data
     }
 }
 
-export const deleteItem = (id) => {
+export const deleteItem = (data) => {
     return {
         type: 'DELETE_ITEM',
-        payload: id
+        payload: data
     }
 }
