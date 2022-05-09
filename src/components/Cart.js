@@ -17,8 +17,20 @@ function Cart(props) {
         return <CartItem quantity={ item.quantity } title={item.title} price={item.price} key={ index } />
     });
 
+    /* Om du köper en Bryggkaffe och en Gustav Adolfsbakelse får du den för ett kampanjpris av 40 kr
+    
+    */
     for(let item of cartItems) {
         totalPrice += item.price * item.quantity;
+
+        if(item.title === "Bryggkaffe"){
+            console.log("Det finns bryggkaffe!");
+
+        }else if(item.title === "Gustav Adolfsbakelse"){
+            console.log("Det finns Gustav Adolfsbakelse!");
+        }
+        // Kolla hur många Bryggkaffe och Gustav Adolfsbakelse det finns
+        // och välj det lägsta antalet för att lägga på rabatten (49kr) för varje kombo
     }
 
     if(visible) {
@@ -35,7 +47,6 @@ function Cart(props) {
 
     function nexxxxxxxtPage() {
         localStorage.clear();
-        console.log("click");
         setVisibleCart(false);
         navigate('/order');
         /* MOVE ON TO NEXT PAGE IN ORDER */
