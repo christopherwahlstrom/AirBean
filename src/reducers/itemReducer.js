@@ -12,7 +12,8 @@ const cartItemReducer = (state = initialState, action) => {
 
   switch(action.type) {
     case 'ADD_ITEM':
-      const filterdState = state.cartItems.filter(item => item.title !== action.payload.title); // no dupes plz
+      const copyArray = [...state.cartItems];
+      const filterdState = copyArray.filter(item => item.title !== action.payload.title); // no dupes plz
       
       if(filterdState.length == state.cartItems.length) {
         action.payload.key = state.cartItems.length;
@@ -32,6 +33,7 @@ const cartItemReducer = (state = initialState, action) => {
 
       const newItemArray = [...state.cartItems];
       const copyItemArray = newItemArray.filter(item => item.quantity >= 1 );
+      console.log("copyItemArray", copyItemArray);
       /*
         console.log("item.key !== action.payload", item.key !== action.payload);
         console.log("item.quantity", item.quantity);
