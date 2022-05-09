@@ -33,3 +33,10 @@ export const saveToLocalstorage = (data) => {
         payload: data
     }
 }
+
+export const emptyCart = (data) => {
+    return {
+        type: 'EMPTY_CART',
+        payload: data
+    }
+}
