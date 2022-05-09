@@ -4,9 +4,9 @@ const initialState = {
 
 const cartItemReducer = (state = initialState, action) => {
 
-  console.log("itemReducer - initialState: ", initialState);
+  //console.log("itemReducer - initialState: ", initialState);
   console.log("itemReducer - state: ", state);
-  console.log("itemReducer - action: ", action);
+  //console.log("itemReducer - action: ", action);
   console.log("itemReducer - action.payload: ", action.payload);
 
 
@@ -33,17 +33,6 @@ const cartItemReducer = (state = initialState, action) => {
 
       const newItemArray = [...state.cartItems];
       const copyItemArray = newItemArray.filter(item => item.quantity >= 1 );
-      console.log("copyItemArray", copyItemArray);
-      /*
-        console.log("item.key !== action.payload", item.key !== action.payload);
-        console.log("item.quantity", item.quantity);
-        console.log("item.quantity >= 1", item.quantity >= 1);
-        
-        if (item.quantity >= 1) {
-          return item
-        }
-      });
-      */
       return {
         ...state,
         cartItems: copyItemArray
@@ -54,7 +43,7 @@ const cartItemReducer = (state = initialState, action) => {
 
       const copyCartItems = [...state.cartItems];
       const newCartItems = copyCartItems.map((item) => {
-        if (action.payload === item.key) {
+        if (action.payload === item.title) {
           item.quantity += 1
           return item
         }
@@ -70,7 +59,7 @@ const cartItemReducer = (state = initialState, action) => {
 
       const copycartItems = [...state.cartItems];
       const newcartItems = copycartItems.map((item) => {
-        if (action.payload === item.key) {
+        if (action.payload === item.title) {
           item.quantity -= 1
           return item
         }

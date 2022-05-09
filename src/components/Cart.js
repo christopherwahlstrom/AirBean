@@ -16,7 +16,6 @@ function Cart(props) {
         return <CartItem quantity={ item.quantity } id={ index } title={item.title} price={item.price} key={ index } />
     });
     
-    
     if(visible) {
         classNames += " overlay-visible";
     } else {

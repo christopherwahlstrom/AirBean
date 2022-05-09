@@ -10,19 +10,18 @@ import { deleteItem } from '../actions/cartActions';
 
 
 function CartItem(props) {
-    const { title, price, quantity, id } = props;
+    const { title, price, quantity } = props;
 
     const dispatch = useDispatch();
 
 
     function addQuant() {
-      dispatch(addQuantity(id))
-      console.log(id);
+      dispatch(addQuantity(title));
     }
 
     function decreaseQuant() {
-      dispatch(decreaseQuantity(id))
-      dispatch(deleteItem(id))
+      dispatch(decreaseQuantity(title));
+      dispatch(deleteItem(title));
     }
 
 
