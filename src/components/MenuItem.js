@@ -5,6 +5,8 @@ import { addItemAction } from '../actions/cartActions';
 
 import AddIcon from '../graphics/add.svg';
 
+import { saveToLocalstorage } from '../actions/cartActions';
+
 
 function MenuItem(props) {
     const { title, desc, price } = props;
@@ -19,6 +21,8 @@ function MenuItem(props) {
             quantity: initialQuantity,
             key: 0
         }));
+
+        dispatch(saveToLocalstorage());
     }
 
     return (

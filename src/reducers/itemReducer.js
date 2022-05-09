@@ -72,6 +72,11 @@ const cartItemReducer = (state = initialState, action) => {
         cartItems: newcartItems
       }
 
+    case 'SAVE_TO_LOCALSTORAGE':
+
+      localStorage.setItem('cartItems', JSON.stringify(state.cartItems));
+      return state;
+
     default:
       return state
   }

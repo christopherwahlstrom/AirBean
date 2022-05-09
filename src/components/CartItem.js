@@ -7,6 +7,7 @@ import { addQuantity } from '../actions/cartActions';
 import { decreaseQuantity } from '../actions/cartActions';
 import { useDispatch } from 'react-redux';
 import { deleteItem } from '../actions/cartActions';
+import { saveToLocalstorage } from '../actions/cartActions';
 
 
 function CartItem(props) {
@@ -17,11 +18,13 @@ function CartItem(props) {
 
     function addQuant() {
       dispatch(addQuantity(title));
+      dispatch(saveToLocalstorage());
     }
 
     function decreaseQuant() {
       dispatch(decreaseQuantity(title));
       dispatch(deleteItem(title));
+      dispatch(saveToLocalstorage());
     }
 
 

@@ -26,3 +26,10 @@ export const deleteItem = (data) => {
         payload: data
     }
 }
+
+export const saveToLocalstorage = (data) => {
+    return {
+        type: 'SAVE_TO_LOCALSTORAGE',
+        payload: data
+    }
+}
