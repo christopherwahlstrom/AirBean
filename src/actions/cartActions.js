@@ -19,3 +19,10 @@ export const decreaseQuantity = (id) => {
         payload: id
     }
 }
+
+export const deleteItem = (id) => {
+    return {
+        type: 'DELETE_ITEM',
+        payload: id
+    }
+}
