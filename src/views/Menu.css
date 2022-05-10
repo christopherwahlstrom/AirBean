@@ -4,10 +4,12 @@
 /* font-family: 'Work Sans', sans-serif; */
 
 .menu {
+  padding-top: 115px;
   width: 100vw;
-  height: fit-content;
+  /* height: 100vh; */
   display: flex;
   flex-direction: column;
+  background-color: #F3E4E1;
 }
 
 .menu--title {

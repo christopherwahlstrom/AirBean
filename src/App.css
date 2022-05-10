@@ -13,13 +13,21 @@
   font-family: 'PT Serif', serif;
   color: #2F2926;
   width: 100vw;
-  height: 100vh;
+  /* height: 100vh; */
 }
 
-.leafyBackground {
+.leafyBackground-header {
   background-color: #F3E4E1;
-  background-image: url(./graphics/graphics-header.svg), url(./graphics/graphics-footer.svg);
-  background-position: center top, center bottom;
+  background-image: url(./graphics/graphics-header.svg);
+  background-position: center top;
   background-repeat: no-repeat;
-  background-size: contain;
+  /* background-size: contain; */
+}
+
+.leafyBackground-footer {
+  background-color: #F3E4E1;
+  background-image: url(./graphics/graphics-footer.svg);
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  /* background-size: contain; */
 }
