@@ -30,15 +30,20 @@ function Header() {
         styling = {display: 'none'};
     }
 
+    let quantity = 0;
+    cartItems.map((item) => {
+        quantity += item.quantity;
+    });
+
     return (
-        <section className="header">
+        <section className="header leafyBackground-header">
             <section className="header--iconWrapper iconWrapper--nav" onClick={ showNav }>
                 <img src={ navicon } alt="shopping bag" className="header--icon" />
             </section>
 
             <section className="header--iconWrapper iconWrapper--cart" onClick={ showCart } >
                 <section className="orderAmount" style={styling}>
-                    <p>{ cartItems.length }</p>
+                    <p>{ quantity }</p>
                 </section>
                 <img src={ shoppingBag } alt="shopping bag" className="header--icon" />
             </section>

@@ -12,11 +12,14 @@ function Menu(props) {
     });
 
     return (
+        <>
+        <Header />
         <article className="menu leafyBackground">
-            <Header />
+            
             <h1 className="menu--title">Meny</h1>
             { menuItems }
         </article>
+        </>
     );
 }
 

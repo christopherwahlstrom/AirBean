@@ -13,10 +13,10 @@ function HeaderAbout() {
     }
 
     return (
-        <section className="header--about">
-            <section className="header--iconWrapper iconWrapper--nav-about" onClick={ showNav }>
+        <section className="header leafyBackground-header">
+            <section className="header--iconWrapper iconWrapper--nav" onClick={ showNav }>
                 <img src={ navicon } alt="shopping bag" className="header--icon" />
-            </section> 
+            </section>
             
             <NavMenu visible={visibleNavMenu} setVisibleNavMenu={ setVisibleNavMenu } />
         </section>

@@ -4,7 +4,7 @@ import HeaderAbout from '../components/HeaderAbout';
 
 const About = () => {
     return (
-        <article className='leafyBackground'>
+        <article>
             <HeaderAbout />
             <section className="about">
                 <h1> Vårt Kaffe </h1>
