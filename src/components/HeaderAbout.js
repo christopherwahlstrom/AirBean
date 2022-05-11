@@ -1,4 +1,4 @@
-import './HeaderAbout.css';
+import './Header.css';
 
 import NavMenu from './NavMenu';
 import navicon from '../graphics/navicon.svg';

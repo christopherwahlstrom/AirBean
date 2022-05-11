@@ -2,6 +2,7 @@ import './Menu.css';
 
 import Header from '../components/Header';
 import MenuItem from '../components/MenuItem';
+import Footer from '../components/Footer';
 
 function Menu(props) {
 
@@ -14,11 +15,12 @@ function Menu(props) {
     return (
         <>
         <Header />
-        <article className="menu leafyBackground">
+        <article className="menu">
             
             <h1 className="menu--title">Meny</h1>
             { menuItems }
         </article>
+        <Footer />
         </>
     );
 }

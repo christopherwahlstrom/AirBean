@@ -1,7 +1,13 @@
+import '../App.css';
+
 function Footer() {
-    <section>
+
+    return (
+        <section className="leafyBackground-footer">
+            
+        </section>
+    )
     
-    </section>
 }
 
 export default Footer;

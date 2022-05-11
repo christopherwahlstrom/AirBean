@@ -17,17 +17,18 @@
 }
 
 .leafyBackground-header {
-  background-color: #F3E4E1;
   background-image: url(./graphics/graphics-header.svg);
-  background-position: center top;
+  background-position: center;
   background-repeat: no-repeat;
-  /* background-size: contain; */
+  background-size: contain;
 }
 
 .leafyBackground-footer {
   background-color: #F3E4E1;
   background-image: url(./graphics/graphics-footer.svg);
-  background-position: center bottom;
+  background-position: bottom;
   background-repeat: no-repeat;
   /* background-size: contain; */
+  height: 115px;
+  
 }
