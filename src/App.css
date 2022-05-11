@@ -13,7 +13,7 @@
   font-family: 'PT Serif', serif;
   color: #2F2926;
   width: 100vw;
-  /* height: 100vh; */
+  background-color: #F3E4E1;
 }
 
 .leafyBackground-header {
@@ -28,7 +28,14 @@
   background-image: url(./graphics/graphics-footer.svg);
   background-position: bottom;
   background-repeat: no-repeat;
-  /* background-size: contain; */
   height: 115px;
-  
+}
+
+.dots {
+  height: 1px;
+  width: 40%;
+  border-bottom: 2px dotted rgba(0, 0, 0, 0.4);
+  align-self: flex-end;
+  margin-bottom: 1.5rem;
+  margin-left: 2rem;
 }

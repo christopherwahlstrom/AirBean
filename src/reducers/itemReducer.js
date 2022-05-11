@@ -4,9 +4,7 @@ const initialState = {
 
 const cartItemReducer = (state = initialState, action) => {
 
-  //console.log("itemReducer - initialState: ", initialState);
   console.log("itemReducer - state: ", state);
-  //console.log("itemReducer - action: ", action);
   console.log("itemReducer - action.payload: ", action.payload);
 
 
