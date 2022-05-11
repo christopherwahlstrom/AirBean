@@ -62,15 +62,6 @@
     margin-left: 1rem;
 }
 
-.dots {
-    height: 1px;
-    width: 40%;
-    border-bottom: 2px dotted rgba(0, 0, 0, 0.4);
-    align-self: flex-end;
-    margin-bottom: 1.5rem;
-    margin-left: 2rem;
-}
-
 .cart .cart-btn {
     align-self: center;
     font-size: 24px;
