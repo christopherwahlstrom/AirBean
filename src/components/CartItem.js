@@ -35,7 +35,7 @@ function CartItem(props) {
           <p className="cartItem--price">{ price } kr</p>
         </section>
 
-        <section className="cartItem-dots dots"></section>
+        <section className="dots"></section>
 
         <section className="cartItem--amountWrapper">
           <img onClick={ addQuant } src={ ArrowUp } alt="increase amount" />

@@ -4,15 +4,11 @@
   display: flex;
 }
 
-.cartItem-dots {
-  width: 100%;
-  margin-bottom: 1.1rem;
-}
-
 .cartItem--title {
   font-size: 20px;
   text-align: left;
   margin: 0;
+  width: max-content;
 }
 
 .cartItem--price {

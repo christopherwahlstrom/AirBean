@@ -53,12 +53,11 @@ function Cart(props) {
 
     const dispatch = useDispatch();
 
-    function nexxxxxxxtPage() {
+    function setOrder() {
         localStorage.clear();
         setVisibleCart(false);
         dispatch(emptyCart());
         navigate('/order');
-        /* MOVE ON TO NEXT PAGE IN ORDER */
     }
 
     return (
@@ -75,7 +74,7 @@ function Cart(props) {
                     <h2 className='sum'>{ totalPrice } kr</h2>
                 </article>
                 <p>Inkl. moms + drönarleverans</p>
-                <button className='cart-btn' onClick={ nexxxxxxxtPage }>Take my money!</button>
+                <button className='cart-btn' onClick={ setOrder }>Take my money!</button>
             </article>
         </section>
     );
