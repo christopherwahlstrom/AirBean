@@ -12,9 +12,7 @@ import { saveToLocalstorage } from '../actions/cartActions';
 
 function CartItem(props) {
     const { title, price, quantity } = props;
-
     const dispatch = useDispatch();
-
 
     function addQuant() {
       dispatch(addQuantity(title));

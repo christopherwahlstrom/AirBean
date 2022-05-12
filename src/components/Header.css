@@ -1,10 +1,11 @@
 .header {
   min-height: 115px;
+  width: 100%;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
   position: fixed;
-  width: 100%;
 }
 
 .header--icon {
@@ -15,9 +16,10 @@
 .header--iconWrapper {
   padding: 1rem;
   border-radius: 50%;
-  display: flex;
   margin: 1.2rem;
   margin-bottom: 2.5rem;
+  
+  display: flex;
 }
 
 .iconWrapper--nav { 
@@ -38,6 +40,7 @@
   background-color: #E5674E;
   border-radius: 50%;
   z-index: 99;
+  
   display: flex;
   justify-content: center;
   align-items: center;

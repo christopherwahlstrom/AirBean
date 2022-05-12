@@ -2,11 +2,13 @@
 
 /* font-family: 'Rufina', serif; */
 /* font-family: 'Work Sans', sans-serif; */
+/* font-family: 'PT Serif', serif; */
 
 .menu {
   padding-top: 5rem;
   width: 100vw;
   background-color: #F3E4E1;
+  
   display: flex;
   flex-direction: column;
   align-items: center;

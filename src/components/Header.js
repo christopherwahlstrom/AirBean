@@ -2,8 +2,10 @@ import './Header.css';
 
 import Cart from './Cart';
 import NavMenu from './NavMenu';
+
 import shoppingBag from '../graphics/bag.svg';
 import navicon from '../graphics/navicon.svg';
+
 import { useState } from 'react';
 import { useSelector } from 'react-redux';
 

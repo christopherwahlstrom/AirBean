@@ -2,6 +2,7 @@ import './Header.css';
 
 import NavMenu from './NavMenu';
 import navicon from '../graphics/navicon.svg';
+
 import { useState } from 'react';
 
 function HeaderAbout() {

@@ -36,7 +36,8 @@ function MenuItem(props) {
                 <section className="menuItem-dots dots"></section>
                 <p className="menuItem--description">{desc}</p>
             </section>
-                <h3 className="menuItem--price">{price} kr</h3>
+            
+            <h3 className="menuItem--price">{price} kr</h3>
         </article>
     );
 }

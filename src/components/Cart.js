@@ -4,7 +4,6 @@ import { useNavigate } from 'react-router-dom';
 import CartItem from './CartItem';
 
 import { useSelector, useDispatch } from 'react-redux';
-
 import { emptyCart } from '../actions/cartActions';
 
 
@@ -73,6 +72,7 @@ function Cart(props) {
                     <section className='dots'></section>
                     <h2 className='sum'>{ totalPrice } kr</h2>
                 </article>
+                
                 <p>Inkl. moms + drönarleverans</p>
                 <button className='cart-btn' onClick={ setOrder }>Take my money!</button>
             </article>
